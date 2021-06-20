@@ -1,0 +1,15 @@
+<div class='taskContainer opacity'>
+
+    <div class="taskInfo">
+        <h2>{{task.title}}</h2>
+        <p><span class='bold'>Fecha:</span> {{task.date | date }}</p>
+        <p><span class='bold'>Hora:</span> {{task.time }}</p>
+        <p>{{task.description}}</p>
+        <p>{{task.done}}</p>
+    </div>
+    <div class="controls">
+        <button class='btnControl' (click)="taskstatus(task._id)">Completada</button>
+        <button class='btnControl' (click)="deleteTask(task._id)">Borrar</button>
+    </div>
+
+</div>

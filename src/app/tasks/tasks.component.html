@@ -1,0 +1,20 @@
+<div class="flex bigContainer">
+
+    <div class="container">
+        <div class="inputs">
+            <input type="text" name="" id="" class="input" [(ngModel)]="taks.title">
+            <input type="date" name="" id="" class="input" [(ngModel)]="taks.date">
+            <input type="time" name="" id="" class="input" [(ngModel)]="taks.time">
+            <textarea name="" id="" cols="30" rows="10" class="input" [(ngModel)]="taks.description"></textarea>
+            <button class="sendBtn" (click)="sendBtn()">Enviar</button>
+        </div>
+    </div>
+
+
+
+    <div class="tasksContainer" *ngFor="let task of tasks">
+        <app-taks [task]="task" (evento)="deleteTaks($event)" (update)="taskToDone($event)"></app-taks>
+    </div>
+
+
+</div>
