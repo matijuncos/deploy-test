@@ -6,8 +6,8 @@ const app = express();
 app.use(express.static(__dirname + "/dist/angular-agenda"));
 
 // Send all requests to index.html
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/dist/angular-agenda/index.html"));
+app.get("*", function (req, res) {
+  res.sendFile(path.resolve(__dirname + "/dist/angular-agenda/index.html"));
 });
 
 // default Heroku port
